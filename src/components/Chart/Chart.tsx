@@ -10,6 +10,7 @@ import { defaultSubscribeChartCodes, useSiteSettingStore } from 'src/store/siteS
 import { krwRegex, usdtRegex } from 'src/utils/regex';
 import { TVChart } from '../TVChart';
 
+
 export interface ChartProps {
   chart: {
     exchange: 'BINANCE' | 'UPBIT';
