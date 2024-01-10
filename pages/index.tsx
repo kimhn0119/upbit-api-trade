@@ -46,7 +46,7 @@ const Home: NextPage = () => {
         </div>
       </div> */}
       <div data-grid-area='chart' className='overflow-y-auto'>
-        {/* {hydrated && <Chart />} */}
+        {/* {hydrated && <Chart />} */}  
       </div>
       <div data-grid-area='orderbook' className='max-h-40 sm:max-h-[initial]'>
         {hydrated && <UpbitOrderBook />}
