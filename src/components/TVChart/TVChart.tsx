@@ -28,7 +28,8 @@ import * as React from 'react';
 //     : (decodeURIComponent(results[1].replace(/\+/g, ' ')) as LanguageCode);
 // }
 
-export interface TVChartProps {
+
+// export interface TVChartProps {
   // symbol?: ChartingLibraryWidgetOptions['symbol'];
   // exchange: 'UPBIT' | 'BINANCE';
   // currency?: string; // "BTC" | "ETH"
