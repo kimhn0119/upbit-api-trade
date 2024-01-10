@@ -28,25 +28,25 @@ import * as React from 'react';
 //     : (decodeURIComponent(results[1].replace(/\+/g, ' ')) as LanguageCode);
 // }
 
-// export interface TVChartProps {
-//   symbol?: ChartingLibraryWidgetOptions['symbol'];
-//   exchange: 'UPBIT' | 'BINANCE';
-//   currency?: string; // "BTC" | "ETH"
-//   interval?: ChartingLibraryWidgetOptions['interval'];
-//   auto_save_delay?: ChartingLibraryWidgetOptions['auto_save_delay'];
+export interface TVChartProps {
+  // symbol?: ChartingLibraryWidgetOptions['symbol'];
+  // exchange: 'UPBIT' | 'BINANCE';
+  // currency?: string; // "BTC" | "ETH"
+  // interval?: ChartingLibraryWidgetOptions['interval'];
+  // auto_save_delay?: ChartingLibraryWidgetOptions['auto_save_delay'];
 
-//   // BEWARE?: no trailing slash is expected in feed URL
-//   libraryPath?: ChartingLibraryWidgetOptions['library_path'];
-//   chartsStorageUrl?: ChartingLibraryWidgetOptions['charts_storage_url'];
-//   chartsStorageApiVersion?: ChartingLibraryWidgetOptions['charts_storage_api_version'];
-//   clientId?: ChartingLibraryWidgetOptions['client_id'];
-//   userId?: ChartingLibraryWidgetOptions['user_id'];
-//   fullscreen?: ChartingLibraryWidgetOptions['fullscreen'];
-//   autosize?: ChartingLibraryWidgetOptions['autosize'];
-//   studiesOverrides?: ChartingLibraryWidgetOptions['studies_overrides'];
-//   containerId?: string; // ChartingLibraryWidgetOptions['container'];
-//   theme?: ThemeName;
-// }
+  // // BEWARE?: no trailing slash is expected in feed URL
+  // libraryPath?: ChartingLibraryWidgetOptions['library_path'];
+  // chartsStorageUrl?: ChartingLibraryWidgetOptions['charts_storage_url'];
+  // chartsStorageApiVersion?: ChartingLibraryWidgetOptions['charts_storage_api_version'];
+  // clientId?: ChartingLibraryWidgetOptions['client_id'];
+  // userId?: ChartingLibraryWidgetOptions['user_id'];
+  // fullscreen?: ChartingLibraryWidgetOptions['fullscreen'];
+  // autosize?: ChartingLibraryWidgetOptions['autosize'];
+  // studiesOverrides?: ChartingLibraryWidgetOptions['studies_overrides'];
+  // containerId?: string; // ChartingLibraryWidgetOptions['container'];
+  // theme?: ThemeName;
+}
 
 // export const TVChartInner: React.FC<TVChartProps> = React.memo<TVChartProps>(
 //   ({
