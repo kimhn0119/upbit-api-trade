@@ -90,7 +90,7 @@ const upbitDataFeed = (): ChartingLibraryWidgetOptions['datafeed'] => {
               has_intraday: symbolInfo['has-intraday'] || !0,
               has_weekly_and_monthly: symbolInfo['has-weekly-and-monthly'],
               has_daily: symbolInfo['has-daily'],
-              visible_plots_set: 'ohlcv',
+              // visible_plots_set: 'ohlcv',
               type: symbolInfo.type[i],
               supported_resolutions: [
                 '1',
@@ -127,7 +127,7 @@ const upbitDataFeed = (): ChartingLibraryWidgetOptions['datafeed'] => {
         .get<ITVUpbitHistory>(`${datafeedUrl}/history`, {
           params: { symbol: symbolInfo.ticker, resolution, from, to }
         })
-        
+
         .then((res) => res.data)
         .then((history) => {
           if (history.s !== 'ok' && history.s !== 'no_data') {
