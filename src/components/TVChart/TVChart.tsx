@@ -47,7 +47,7 @@ import * as React from 'react';
   // studiesOverrides?: ChartingLibraryWidgetOptions['studies_overrides'];
   // containerId?: string; // ChartingLibraryWidgetOptions['container'];
   // theme?: ThemeName;
-}
+// }
 
 // export const TVChartInner: React.FC<TVChartProps> = React.memo<TVChartProps>(
 //   ({
