@@ -22,6 +22,7 @@ You can request permission for that library at the address below.<br />
 [https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts](https://www.tradingview.com/HTML5-stock-forex-bitcoin-charting-library/?feature=technical-analysis-charts)
 
 commit hash applied to this project - [58407be459423b5837d6a0c6bd36d049fd6703b9](https://github.com/tradingview/charting_library/tree/58407be459423b5837d6a0c6bd36d049fd6703b9)
+xcvxcv
 
 If you have access to the library
 1. Copy `charting_library` folder from [https://github.com/tradingview/charting_library](https://github.com/tradingview/charting_library)

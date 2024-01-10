@@ -51,6 +51,8 @@ const Home: NextPage = () => {
       <div data-grid-area='orderbook' className='max-h-40 sm:max-h-[initial]'>
         {hydrated && <UpbitOrderBook />}
       </div>
+
+      
       {siteConfig.upbitApiTrade && (
         <>
           {hydrated && (
