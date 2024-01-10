@@ -88,6 +88,8 @@ const UpbitOrderBookContainer: React.FC<{ marketSymbol: string; currency: 'krw' 
   const { data } = useSWR(
     `${PROXY_PATH}${apiUrls.upbit.path}${apiUrls.upbit.orderbook}?markets=${marketSymbol}`,
     async (url: string) => {
+      console.log(url);
+      
       const result = (await axios.get<IUpbitOrderbooks>(url).then((res) => {
         const o = res.data[0];
 

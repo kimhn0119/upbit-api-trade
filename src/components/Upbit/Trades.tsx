@@ -51,6 +51,7 @@ const UpbitRecentTradesContainer = () => {
   const { data, mutate } = useSWR(
     `${PROXY_PATH}${apiUrls.upbit.path}${apiUrls.upbit.trades.ticks}?market=${upbitTradeMarket}&count=${MAX_TRADE}`,
     async (url: string) => {
+      console.log(url);
       return await axios
         .get<Array<IUpbitTradesTicks>>(url)
         .then((res) =>
