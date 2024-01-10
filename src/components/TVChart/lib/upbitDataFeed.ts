@@ -122,49 +122,49 @@ const upbitDataFeed = (): ChartingLibraryWidgetOptions['datafeed'] => {
     },
     async getBars(symbolInfo, resolution, periodParams, onHistoryCallback, onErrorCallback) {
       // console.log('[!] getBars', symbolInfo, resolution, periodParams);
-      const { countBack, firstDataRequest, from, to } = periodParams;
-      await axios
-        .get<ITVUpbitHistory>(`${datafeedUrl}/history`, {
-          params: { symbol: symbolInfo.ticker, resolution, from, to }
-        })
+      // const { countBack, firstDataRequest, from, to } = periodParams;
+      // await axios
+      //   .get<ITVUpbitHistory>(`${datafeedUrl}/history`, {
+      //     params: { symbol: symbolInfo.ticker, resolution, from, to }
+      //   })
 
-        .then((res) => res.data)
-        .then((history) => {
-          if (history.s !== 'ok' && history.s !== 'no_data') {
-            return onErrorCallback(history?.errmsg || history.s);
-          }
-          const bars: Array<Bar> = [];
-          const meta: HistoryMetadata | undefined = { nextTime: undefined, noData: undefined };
+      //   .then((res) => res.data)
+      //   .then((history) => {
+      //     if (history.s !== 'ok' && history.s !== 'no_data') {
+      //       return onErrorCallback(history?.errmsg || history.s);
+      //     }
+      //     const bars: Array<Bar> = [];
+      //     const meta: HistoryMetadata | undefined = { nextTime: undefined, noData: undefined };
 
-          if ('no_data' === history.s) {
-            meta.noData = true;
-            onHistoryCallback(bars, meta);
-            return;
-          } else {
-            const historyLength = history.t.length;
-            for (let i = 0; i < historyLength; i++) {
-              const bar: Bar = {
-                time: history.t[i],
-                close: Number(history.c[i]),
-                open: Number(history.o[i]),
-                high: Number(history.h[i]),
-                low: Number(history.l[i]),
-                volume: history?.v[i] ?? undefined
-              };
+      //     if ('no_data' === history.s) {
+      //       meta.noData = true;
+      //       onHistoryCallback(bars, meta);
+      //       return;
+      //     } else {
+      //       const historyLength = history.t.length;
+      //       for (let i = 0; i < historyLength; i++) {
+      //         const bar: Bar = {
+      //           time: history.t[i],
+      //           close: Number(history.c[i]),
+      //           open: Number(history.o[i]),
+      //           high: Number(history.h[i]),
+      //           low: Number(history.l[i]),
+      //           volume: history?.v[i] ?? undefined
+      //         };
 
-              bars.push(bar);
-            }
-            if (firstDataRequest && symbolInfo?.ticker) {
-              lastBarsCache.set(`0~${symbolInfo.exchange}~${symbolInfo.full_name}`, {
-                ...bars[bars.length - 1]
-              });
-            }
-          }
-          setTimeout(() => {
-            onHistoryCallback(bars, meta);
-          }, 0);
-        })
-        .catch((err) => onErrorCallback(err));
+      //         bars.push(bar);
+      //       }
+      //       if (firstDataRequest && symbolInfo?.ticker) {
+      //         lastBarsCache.set(`0~${symbolInfo.exchange}~${symbolInfo.full_name}`, {
+      //           ...bars[bars.length - 1]
+      //         });
+      //       }
+      //     }
+      //     setTimeout(() => {
+      //       onHistoryCallback(bars, meta);
+      //     }, 0);
+      //   })
+      //   .catch((err) => onErrorCallback(err));
     },
     subscribeBars: (
       symbolInfo,
