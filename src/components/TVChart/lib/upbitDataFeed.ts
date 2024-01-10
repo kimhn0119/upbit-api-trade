@@ -127,6 +127,7 @@ const upbitDataFeed = (): ChartingLibraryWidgetOptions['datafeed'] => {
         .get<ITVUpbitHistory>(`${datafeedUrl}/history`, {
           params: { symbol: symbolInfo.ticker, resolution, from, to }
         })
+        
         .then((res) => res.data)
         .then((history) => {
           if (history.s !== 'ok' && history.s !== 'no_data') {
