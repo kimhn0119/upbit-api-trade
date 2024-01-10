@@ -52,7 +52,7 @@ const upbitDataFeed = (): ChartingLibraryWidgetOptions['datafeed'] => {
       // console.log('[!] searchSymbols running');
       onResultReadyCallback([]);
     },
-    async resolveSymbol(symbolName, onSymbolResolvedCallback, onResolveErrorCallback, extension) {
+    async resolveSymbol(symbolName, onSymbolResolvedCallback, onResolveErrorCallback/*, extension*/) {
       // console.log('[!] resolveSymbol', symbolName);
       if (symbolInfoStorage[symbolName]) {
         setTimeout(() => onSymbolResolvedCallback(symbolInfoStorage[symbolName]), 0);
