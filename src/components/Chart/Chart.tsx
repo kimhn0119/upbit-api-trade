@@ -168,23 +168,7 @@ export const ChartInner: React.FC<Pick<ChartProps, 'chart'>> = memo(
         <div className='flex-auto flex-grow-0 flex-shrink-0'>
           <SelectChart chart={chart} />
         </div>
-        {chart?.exchange === 'BINANCE' ? (
-          <TVChart
-            interval={'15' as ResolutionString}
-            symbol={chart?.code + 'USDT'}
-            currency={chart?.code}
-            exchange={'BINANCE'}
-          />
-        ) : chart?.exchange === 'UPBIT' ? (
-          <TVChart
-            interval={'15' as ResolutionString}
-            symbol={chart?.code + 'KRW'}
-            currency={chart?.code}
-            exchange={'UPBIT'}
-          />
-        ) : (
-          <div className='flex-center h-full bg-base-200'>상단에서 차트를 선택해주세요</div>
-        )}
+    
       </div>
     );
   },
