@@ -46,7 +46,7 @@ const Home: NextPage = () => {
         </div>
       </div> */}
       <div data-grid-area='chart' className='overflow-y-auto'>
-        {hydrated && <Chart />}
+        {/* {hydrated && <Chart />} */}
       </div>
       <div data-grid-area='orderbook' className='max-h-40 sm:max-h-[initial]'>
         {hydrated && <UpbitOrderBook />}
@@ -96,7 +96,7 @@ const Home: NextPage = () => {
               <p className='mt-3'>
                 또는{' '}
                 <Link href='/last'>
-                  <a className='text-white underline'>현재 시세보는 페이지</a>
+               현재 시세보는 페이지
                 </Link>
               </p>
             </div>

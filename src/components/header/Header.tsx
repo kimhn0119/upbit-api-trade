@@ -132,11 +132,11 @@ const Header: React.FC = () => {
     <nav className='sticky top-0 left-0 z-10 bg-base-200' ref={headerRef}>
       <div className='flex items-center justify-between xl:mx-auto '>
         <Link href={'/'}>
-          <a>
+         
             <button className='text-lg btn btn-circle btn-ghost btn-sm bg-base-200'>
               <FaSlackHash />
             </button>
-          </a>
+       
         </Link>
         <div className='basis-full text-center'>
           {/* <TradingViewTapeWidget /> */}

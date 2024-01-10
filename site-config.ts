@@ -38,7 +38,7 @@ const siteConfig = siteConfigMaker({
    *! 업비트 이용약관: https://www.upbit.com/terms_of_service
    *! 업비트 openApi 이용약관: https://upbit.com/open_api_agreement
    */
-  upbitApiTrade: false
+  upbitApiTrade: true
   //* 선택적인 설정
 });
 

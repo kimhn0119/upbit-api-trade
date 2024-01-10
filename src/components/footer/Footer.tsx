@@ -19,7 +19,7 @@ const Footer: React.FC<FooterProps> = ({}) => {
               <div className='dropdown-content w-[75vw] md:w-[50vw] bg-base-100 rounded-xl text-sm overflow-hidden'>
                 <div className='bg-yellow-700/20 p-3 py-2'>
                   <Link href='https://crypto.sooros.com/'>
-                    <a className='underline'>crypto.sooros.com</a>
+                   crypto.sooros.com
                   </Link>
                   은 토이프로젝트&amp;개인사용 목적으로 만들어진 사이트이며 사이트 내 모든 암호화폐
                   가격 정보에 대하여 어떠한 책임을 지지 않습니다. 디지털 자산 투자에 대한 금전적
